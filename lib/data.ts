@@ -55,7 +55,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Redux Toolkit",
     ],
-    githubUrl: "https://github.com/Ezio7777",
+    githubUrl: "https://github.com/Ezio7777/PDF_GPT",
     liveUrl: "https://pdf-gpt-amber.vercel.app/",
   },
   {
@@ -70,7 +70,7 @@ export const projects: Project[] = [
       "OTP Auth",
       "REST APIs",
     ],
-    githubUrl: "https://github.com/Ezio7777",
+    githubUrl: "https://github.com/Ezio7777/E-Mandi",
     liveUrl: "https://e-mandi-eight.vercel.app/",
   },
 ];

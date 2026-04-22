@@ -2,8 +2,8 @@ import { personalInfo } from "@/lib/data";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--color-border)] py-10 px-6 md:px-12 lg:px-20">
-      <div className="container-max flex flex-col md:flex-row items-center justify-between gap-4">
+    <footer className="border-t border-[var(--color-border)] py-8 px-5 sm:px-8 md:px-12 lg:px-20">
+      <div className="w-full max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
         <div className="flex items-center gap-2.5">
           <div className="w-6 h-6 rounded shimmer-btn flex items-center justify-center">
             <span className="font-display text-obsidian-900 font-bold text-xs">S</span>
