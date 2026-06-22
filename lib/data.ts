@@ -7,12 +7,12 @@ export const personalInfo = {
   location: "West Bengal, India",
   email: "sunitpal2000@gmail.com",
   phone: "7478876252",
-  resumeUrl: "https://drive.google.com/file/d/1ZdaYdkym2N2anPgEvkSvc817bURPJPic/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1vxoXZHxvxSiAcD-Ip3bO5UA57JZoM-Q2/view?usp=sharing",
 };
 
 export const experiences: Experience[] = [
   {
-    role: "React App Developer",
+    role: "Software Developer",
     company: "ProjectStudio.ai",
     duration: "Nov 2025 – Mar 2026",
     type: "Internship",
@@ -57,6 +57,13 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/Ezio7777/PDF_GPT",
     liveUrl: "https://pdf-gpt-amber.vercel.app/",
+    images: [
+      "/images/PDF_GPT/image1.png",
+      "/images/PDF_GPT/image2.png", 
+      "/images/PDF_GPT/image3.png", 
+      "/images/PDF_GPT/image4.png", 
+      "/images/PDF_GPT/image5.png", 
+    ],
   },
   {
     title: "E-Mandi",
@@ -72,6 +79,54 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/Ezio7777/E-Mandi",
     liveUrl: "https://e-mandi-eight.vercel.app/",
+     images: [
+      "/images/E-Mandi/image1.png",
+      "/images/E-Mandi/image2.png", 
+      "/images/E-Mandi/image3.png", 
+      "/images/E-Mandi/image4.png", 
+    ],
+  },
+  {
+    title: "MyQuiz",
+    description:
+      "Developed an interactive quiz platform using MERN stack technologies, Customizable quizzes with real-time monitoring and analytics via a dashboard, Generated unique access codes for participants to join and interact.",
+    techStack: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "OTP Auth",
+      "REST APIs",
+    ],
+    githubUrl: "https://github.com/Ezio7777/E-Mandi",
+    liveUrl: "https://e-mandi-eight.vercel.app/",
+     images: [
+      "/images/MyQuiz/image1.png",
+      "/images/MyQuiz/image2.png", 
+      "/images/MyQuiz/image3.png", 
+      "/images/MyQuiz/image4.png", 
+    ],
+  },
+  {
+    title: "TeamFlow",
+    description:
+      "A full-stack, real-time team collaboration platform featuring role-based access control, a drag-and-drop Kanban board, live team chat, and an integrated AI-powered assistant for task management.",
+    techStack: [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "Socket.IO",
+      "Firebase Auth",
+    ],
+    githubUrl: "https://github.com/Ezio7777/TeamFlow",
+    liveUrl: "https://team-flow-sable.vercel.app/",
+    images: [
+      "/images/TeamFlow/image1.png",
+      "/images/TeamFlow/image2.png", 
+      "/images/TeamFlow/image3.png", 
+      "/images/TeamFlow/image4.png", 
+    ],
   },
 ];
 
@@ -79,7 +134,7 @@ export const skillCategories: SkillCategory[] = [
   {
     category: "Frontend Development",
     icon: "🎨",
-    skills: ["React.js", "Next.js", "React Native", "TypeScript", "Redux", "HTML", "CSS / SCSS", "Bootstrap"],
+    skills: ["React.js", "Next.js", "React Native", "TypeScript", "Redux", "HTML", "CSS / SCSS", "Bootstrap", "Tailwind CSS"],
   },
   {
     category: "Backend Development",
