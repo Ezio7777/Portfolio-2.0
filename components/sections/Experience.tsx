@@ -15,7 +15,7 @@ export default function Experience() {
         <SectionHeader
           eyebrow="02 · Work Experience"
           title="Where I've Worked"
-          description="Roles that shaped my craft — from building enterprise-grade React Native apps to engineering full-stack web platforms."
+          description="Roles that shaped my craft — from enterprise React Native apps and full-stack platforms to agentic AI systems."
         />
 
         <StaggerContainer className="relative">
@@ -45,11 +45,11 @@ export default function Experience() {
                         <h3 className="font-display text-lg sm:text-xl md:text-2xl text-[var(--color-text-primary)]">
                           {exp.role}
                         </h3>
-                        {/* {i === 0 && (
+                        {exp.duration.includes("Present") && (
                           <span className="px-2 py-0.5 rounded-full bg-green-400/10 border border-green-400/30 text-green-400 text-[10px] font-mono tracking-wide shrink-0">
                             Current
                           </span>
-                        )} */}
+                        )}
                       </div>
                       {exp.link ? (
                         <a

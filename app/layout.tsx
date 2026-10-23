@@ -2,9 +2,10 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sunit Portfolio",
+  metadataBase: new URL("https://portfolio-2-0-six-wine.vercel.app"),
+  title: "Sunit Pal — Software Developer",
   description:
-    "Portfolio of Sunit Pal — React Developer and Full-Stack Engineer specialising in high-performance web & mobile applications, AI-integrated systems, and modern frontend architectures.",
+    "Portfolio of Sunit Pal — Software Developer building full-stack web and mobile apps with React, Next.js, React Native, Node.js, FastAPI and AI-powered features.",
   keywords: [
     "Sunit Pal",
     "React Developer",
@@ -20,21 +21,21 @@ export const metadata: Metadata = {
   authors: [{ name: "Sunit Pal", url: "https://github.com/Ezio7777" }],
   creator: "Sunit Pal",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/favicon.svg?v=3",
+    shortcut: "/favicon.svg?v=3",
   },
   openGraph: {
     type: "website",
     locale: "en_IN",
-    title: "Sunit Portfolio",
+    title: "Sunit Pal — Software Developer",
     description:
-      "Portfolio of Sunit Pal — building high-performance web and mobile applications.",
-    siteName: "Sunit Portfolio",
+      "Full-stack and AI-powered web & mobile applications.",
+    siteName: "Sunit Pal",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sunit Portfolio",
-    description: "Building high-performance web and mobile applications.",
+    title: "Sunit Pal — Software Developer",
+    description: "Full-stack and AI-powered web & mobile applications.",
   },
   robots: {
     index: true,
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#08080a",
+  themeColor: "#0A0F13",
 };
 
 export default function RootLayout({
@@ -55,7 +56,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="noise-overlay antialiased">{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

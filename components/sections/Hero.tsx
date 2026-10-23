@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-28 md:py-32 px-5 sm:px-8 md:px-12 lg:px-20"
+      className="hero-classic relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-28 md:py-32 px-5 sm:px-8 md:px-12 lg:px-20"
     >
       {/* Background glow blobs — contained so they don't cause overflow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -76,7 +76,7 @@ export default function Hero() {
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
               className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 glass rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 border border-gold-500/20 shadow-xl"
             >
-              <span className="font-mono text-[10px] sm:text-xs text-gold-400 whitespace-nowrap">React Dev</span>
+              <span className="font-mono text-[10px] sm:text-xs text-gold-400 whitespace-nowrap">Full-Stack Dev</span>
             </motion.div>
           </div>
         </motion.div>

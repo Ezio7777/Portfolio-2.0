@@ -10,6 +10,7 @@ export interface Experience {
 
 export interface Project {
   title: string;
+  category?: string;
   description: string;
   techStack: string[];
   githubUrl?: string;
@@ -28,6 +29,12 @@ export interface Education {
   institution: string;
   duration: string;
   type: "university" | "school";
+}
+
+export interface Certificate {
+  title: string;
+  issuer: string;
+  url: string;
 }
 
 export interface SocialLink {

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
 import { personalInfo } from "@/lib/data";
+import Logo from "@/components/ui/Logo";
 
 const navLinks = [
   { label: "Experience", href: "#experience" },
@@ -39,7 +40,7 @@ export default function Navbar() {
   // Force close menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setMobileOpen(false);
       }
     };
@@ -62,18 +63,14 @@ export default function Navbar() {
         <div className="w-full max-w-6xl mx-auto px-5 sm:px-8 md:px-12 lg:px-20 flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#hero" className="group flex items-center gap-2.5 shrink-0">
-            <div className="w-8 h-8 rounded-lg shimmer-btn flex items-center justify-center">
-              <span className="font-display text-obsidian-900 font-bold text-sm">
-                S
-              </span>
-            </div>
+            <Logo size={38} />
             <span className="font-display text-[var(--color-text-primary)] text-lg group-hover:text-gold-400 transition-colors duration-300">
               {personalInfo.name.split(" ")[0]}
             </span>
           </a>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link, i) => (
               <motion.a
                 key={link.label}
@@ -89,7 +86,8 @@ export default function Navbar() {
             ))}
             <motion.a
               href={personalInfo.resumeUrl}
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
@@ -103,7 +101,7 @@ export default function Navbar() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-[var(--color-text-secondary)] hover:text-gold-400 hover:bg-white/5 transition-all duration-200"
+            className="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg text-[var(--color-text-secondary)] hover:text-gold-400 hover:bg-white/5 transition-all duration-200"
             aria-label="Toggle menu"
           >
             <AnimatePresence mode="wait">
@@ -144,7 +142,7 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
               onClick={() => setMobileOpen(false)}
-              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
             />
 
             <motion.div
@@ -153,13 +151,11 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
-              className="fixed top-0 right-0 bottom-0 z-50 w-[75vw] max-w-[300px] bg-[var(--color-surface)] border-l border-[var(--color-border)] flex flex-col md:hidden shadow-2xl"
+              className="fixed top-0 right-0 bottom-0 z-50 w-[75vw] max-w-[300px] bg-[var(--color-surface)] border-l border-[var(--color-border)] flex flex-col lg:hidden shadow-2xl"
             >
               <div className="flex items-center justify-between px-6 py-5 border-b border-[var(--color-border)]">
                 <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-md shimmer-btn flex items-center justify-center">
-                    <span className="font-display text-obsidian-900 font-bold text-xs">S</span>
-                  </div>
+                  <Logo size={32} />
                   <span className="font-display text-[var(--color-text-primary)] text-base">
                     {personalInfo.name.split(" ")[0]}
                   </span>
@@ -194,7 +190,8 @@ export default function Navbar() {
               <div className="px-4 pb-8 pt-4 border-t border-[var(--color-border)]">
                 <motion.a
                   href={personalInfo.resumeUrl}
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.35 }}

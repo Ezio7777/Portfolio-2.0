@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
+import Marquee from "@/components/sections/Marquee";
 import Experience from "@/components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import Skills from "@/components/sections/Skills";
@@ -9,9 +10,10 @@ import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ overflowX: "clip" }}>
       <Navbar />
       <Hero />
+      <Marquee />
       <Experience />
       <Projects />
       <Skills />

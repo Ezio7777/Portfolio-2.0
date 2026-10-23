@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, School } from "lucide-react";
-import { education } from "@/lib/data";
+import { GraduationCap, School, Award, ExternalLink } from "lucide-react";
+import { education, certificates } from "@/lib/data";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { StaggerContainer, staggerItem } from "@/components/ui/AnimationWrapper";
 
@@ -51,6 +51,39 @@ export default function Education() {
             );
           })}
         </StaggerContainer>
+
+        {/* Certificates */}
+        <div className="mt-14 max-w-3xl">
+          <p className="font-mono text-xs text-[var(--color-text-muted)] tracking-widest uppercase mb-5">
+            Certificates
+          </p>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {certificates.map((c) => (
+              <motion.a
+                key={c.title}
+                variants={staggerItem}
+                href={c.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group glass glass-hover rounded-2xl p-5 border border-[var(--color-border)] flex items-start gap-4"
+              >
+                <div className="w-10 h-10 shrink-0 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center">
+                  <Award size={18} className="text-gold-500" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <h4 className="font-display text-sm sm:text-base text-[var(--color-text-primary)] leading-snug mb-1">
+                    {c.title}
+                  </h4>
+                  <p className="font-mono text-xs text-gold-400/80">{c.issuer}</p>
+                </div>
+                <ExternalLink
+                  size={13}
+                  className="opacity-0 group-hover:opacity-100 transition-opacity text-gold-400 shrink-0 mt-1"
+                />
+              </motion.a>
+            ))}
+          </StaggerContainer>
+        </div>
       </div>
     </section>
   );

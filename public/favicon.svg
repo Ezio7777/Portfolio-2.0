@@ -1,5 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#08080a"/>
-  <rect x="1" y="1" width="30" height="30" rx="7" stroke="#f59e0b" stroke-width="1.5" fill="none"/>
-  <text x="16" y="22.5" font-family="Georgia, serif" font-size="18" font-weight="bold" font-style="italic" fill="#f59e0b" text-anchor="middle">S</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6bb4e3"/>
+      <stop offset=".36" stop-color="#3282b8"/>
+      <stop offset=".72" stop-color="#0f4c75"/>
+      <stop offset="1" stop-color="#0a2f49"/>
+    </linearGradient>
+    <linearGradient id="gl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="c"><rect width="64" height="64" rx="18"/></clipPath>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#g)"/>
+  <ellipse cx="32" cy="-4" rx="48" ry="32" fill="url(#gl)" clip-path="url(#c)"/>
+  <rect x="1" y="1" width="62" height="62" rx="17" fill="none" stroke="#bbe1fa" stroke-opacity=".3" stroke-width="2"/>
+  <text x="32" y="46" text-anchor="middle" font-family="Kanit, 'Arial Black', Helvetica, Arial, sans-serif" font-weight="900" font-size="40" fill="#fff">S</text>
 </svg>

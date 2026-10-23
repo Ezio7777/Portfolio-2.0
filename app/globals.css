@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
@@ -5,21 +6,21 @@
 @tailwind utilities;
 
 :root {
-  --font-display: 'DM Serif Display', serif;
-  --font-body: 'DM Sans', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Kanit', sans-serif;
+  --font-body: 'Kanit', sans-serif;
+  --font-mono: 'Kanit', sans-serif;
 
-  --color-bg: #08080a;
-  --color-surface: #111116;
-  --color-surface-2: #1a1a22;
-  --color-border: rgba(255, 255, 255, 0.06);
-  --color-border-hover: rgba(251, 191, 36, 0.3);
-  --color-text-primary: #f0efe9;
-  --color-text-secondary: #8a8a9a;
-  --color-text-muted: #555565;
-  --color-gold: #f59e0b;
-  --color-gold-light: #fcd34d;
-  --color-gold-glow: rgba(245, 158, 11, 0.15);
+  --color-bg: #0a0f13;
+  --color-surface: #111a20;
+  --color-surface-2: #1b262c;
+  --color-border: rgba(187, 225, 250, 0.09);
+  --color-border-hover: rgba(50, 130, 184, 0.5);
+  --color-text-primary: #e6f3fc;
+  --color-text-secondary: #8fa9ba;
+  --color-text-muted: #5c7585;
+  --color-gold: #3282b8;
+  --color-gold-light: #bbe1fa;
+  --color-gold-glow: rgba(50, 130, 184, 0.22);
 }
 
 * {
@@ -28,12 +29,14 @@
   box-sizing: border-box;
 }
 
+/* overflow-x: clip (not hidden) so position: sticky keeps working in the project stack */
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
+  background-color: var(--color-bg);
 }
 
 body {
@@ -41,41 +44,41 @@ body {
   color: var(--color-text-primary);
   font-family: var(--font-body);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background: var(--color-bg);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-gold);
-  border-radius: 2px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gold-light);
-}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-gold); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-gold-light); }
 
-/* Selection */
 ::selection {
-  background: rgba(245, 158, 11, 0.25);
-  color: var(--color-gold-light);
+  background: rgba(50, 130, 184, 0.35);
+  color: #fff;
 }
 
-/* Utility classes */
-.section-padding {
-  @apply py-24 md:py-32 px-6 md:px-12 lg:px-20;
+.section-padding { @apply py-24 md:py-32 px-6 md:px-12 lg:px-20; }
+.container-max { @apply max-w-6xl mx-auto; }
+
+/* The original hero keeps its own typography (serif name, DM Sans body, mono labels) */
+.hero-classic {
+  --font-display: 'DM Serif Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  font-family: var(--font-body);
 }
 
-.container-max {
-  @apply max-w-6xl mx-auto;
+/* Silver gradient headline text */
+.hero-heading {
+  background: linear-gradient(180deg, #3282b8 0%, #bbe1fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
+/* Blue → sky accent text */
 .text-gradient {
-  background: linear-gradient(135deg, #f59e0b 0%, #fcd34d 50%, #fbbf24 100%);
+  background: linear-gradient(123deg, #3282b8 0%, #6fb6e6 50%, #bbe1fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -88,9 +91,7 @@ body {
   border: 1px solid var(--color-border);
 }
 
-.glass-hover {
-  transition: all 0.3s ease;
-}
+.glass-hover { transition: all 0.3s ease; }
 .glass-hover:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: var(--color-border-hover);
@@ -104,28 +105,23 @@ body {
 }
 
 .dot-grid {
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(187, 225, 250, 0.06) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
-/* Shimmer button effect */
+/* Primary button: deep blue → accent blue gradient with white text */
 .shimmer-btn {
-  background: linear-gradient(
-    90deg,
-    var(--color-gold) 0%,
-    var(--color-gold-light) 50%,
-    var(--color-gold) 100%
-  );
+  background: linear-gradient(123deg, #0a3556 0%, #0f4c75 38%, #2c79ad 100%);
   background-size: 200% auto;
-  animation: shimmer 3s linear infinite;
+  color: #fff;
+  animation: shimmer 6s linear infinite alternate;
 }
 
 @keyframes shimmer {
   0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
+  100% { background-position: 100% center; }
 }
 
-/* Noise overlay */
 .noise-overlay::after {
   content: '';
   position: fixed;
@@ -137,10 +133,5 @@ body {
   z-index: 9999;
 }
 
-/* Smooth cursor */
-* {
-  cursor: default;
-}
-a, button, [role="button"] {
-  cursor: pointer;
-}
+* { cursor: default; }
+a, button, [role="button"] { cursor: pointer; }
