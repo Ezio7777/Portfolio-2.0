@@ -60,11 +60,11 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 glass rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 border border-gold-500/20 shadow-xl"
+              className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 bg-[#0a0f13]/95 backdrop-blur-md rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 border border-gold-500/50 shadow-xl shadow-black/50"
             >
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-400 animate-pulse" />
-                <span className="font-mono text-[10px] sm:text-xs text-[var(--color-text-secondary)] whitespace-nowrap">
+                <span className="font-mono text-[11px] sm:text-sm font-medium text-gold-100 whitespace-nowrap">
                   Open to work
                 </span>
               </div>
@@ -74,9 +74,9 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, 5, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-              className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 glass rounded-xl px-2.5 py-1.5 sm:px-3 sm:py-2 border border-gold-500/20 shadow-xl"
+              className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 bg-[#0a0f13]/95 backdrop-blur-md rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 border border-gold-500/50 shadow-xl shadow-black/50"
             >
-              <span className="font-mono text-[10px] sm:text-xs text-gold-400 whitespace-nowrap">Full-Stack Dev</span>
+              <span className="font-mono text-[11px] sm:text-sm font-medium text-gold-200 whitespace-nowrap">Full-Stack Dev</span>
             </motion.div>
           </div>
         </motion.div>
