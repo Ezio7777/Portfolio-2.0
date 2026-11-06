@@ -15,7 +15,7 @@ export const personalInfo = {
   email: "sunitpal2000@gmail.com",
   phone: "+91-7478876252",
   resumeUrl:
-    "https://drive.google.com/file/d/1ZdaYdkym2N2anPgEvkSvc817bURPJPic/view?usp=sharing",
+    "https://drive.google.com/file/d/1mRMKOhDMDQMTCHrzAYQAqEWUwhOPMlAU/view?usp=sharing",
 };
 
 export const experiences: Experience[] = [
